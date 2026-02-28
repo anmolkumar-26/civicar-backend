@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CivicAR – Smart Civic Reporting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<header class="hero">
+  <nav>
+    <h1>🚀 CivicAR</h1>
+    <button class="cta" onclick="scrollToDemo()">Live Demo</button>
+  </nav>
+
+  <div class="hero-content">
+    <h2>Your City. Your Problems. Your Code.</h2>
+    <p>AI + Location powered civic issue reporting for smart cities.</p>
+    <button onclick="scrollToDemo()">Try Demo</button>
+  </div>
+</header>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2>Why We Win</h2>
+  <div class="grid">
+    <div class="card">🧠 AI-Verified Reports</div>
+    <div class="card">📸 Photo Evidence</div>
+    <div class="card">📍 Exact Location</div>
+    <div class="card">⚡ Faster Resolution</div>
+  </div>
+</section>
+
+<!-- DEMO SECTION -->
+<section class="demo" id="demo">
+  <h2>Live Civic Issue Demo</h2>
+
+  <div class="report-card">
+
+    <!-- PHOTO -->
+    <label class="upload-btn">
+      📸 Click Photo
+      <input type="file" accept="image/*" capture="environment" id="photoInput">
+    </label>
+    <img id="preview" />
+
+    <!-- LOCATION -->
+    <button onclick="getLocation()">📍 Get Exact Location</button>
+    <p id="location"></p>
+
+    <!-- FORM -->
+    <form id="reportForm">
+      <input type="text" id="title" placeholder="Issue Title" required />
+
+      <select id="type" required>
+        <option value="">Select Issue Type</option>
+        <option>Pothole</option>
+        <option>Garbage</option>
+        <option>Water Leak</option>
+        <option>Street Light</option>
+        <option>Noise</option>
+      </select>
+
+      <textarea id="issue" placeholder="Describe the issue..." required></textarea>
+
+      <button type="submit">📧 Submit Report</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div>
+    <h3 id="reports">0</h3>
+    <p>Issues Reported</p>
+  </div>
+  <div>
+    <h3>24 hrs</h3>
+    <p>Resolution Target</p>
+  </div>
+  <div>
+    <h3>100%</h3>
+    <p>Transparency</p>
+  </div>
+</section>
+
+<footer>
+  <p>🏆 Hackathon Prototype | Team Tech Warriors</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
